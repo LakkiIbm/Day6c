@@ -46,3 +46,30 @@
 //    }
 //}
 
+
+
+//-----------------------index out of range exception------------------------------------
+namespace Demo
+{
+    class MyArray
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int[] n = new int[5] { 66, 33, 56, 23, 81 };
+                int i, j;
+                
+                for (j = 0; j < 10; j++)
+                {
+                    Console.WriteLine("Element[{0}] = {1}", j, n[j]);
+                }
+                Console.ReadKey();
+            }
+            catch (System.IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+    }
+}
